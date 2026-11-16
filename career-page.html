@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Career With Us (Practice Layout)</title>
+<style>
+  :root{
+    --green-dark:#056228;
+    --green-link:#0a7a35;
+    --green-banner-1:#1f8f45;
+    --green-banner-2:#4caf50;
+    --card-bg:#eef6ee;
+    --text:#222;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Roboto","Segoe UI",Arial,sans-serif;color:var(--text);background:#fff;min-height:100vh;zoom:.8}
+  a{text-decoration:none;color:inherit}
+  .container{width:100%;max-width:1510px;margin:0 auto;padding:0 20px}
+
+  /* Header */
+  header{background:#fff;height:105px}
+  header .container{display:flex;align-items:center;height:100%}
+  .logo{display:flex;flex-direction:column;width:340px}
+  .logo b{font-family:Georgia,serif;font-size:32px;color:var(--green-dark);letter-spacing:.5px}
+  .logo small{font-size:14px;color:#444}
+  nav{display:flex;align-items:center;margin-left:90px;gap:0}
+  nav a{font-size:25px;color:var(--green-link);padding:0 34px}
+  nav a+a{border-left:2px solid #c0392b}
+  .right{margin-left:auto;display:flex;align-items:center;gap:22px}
+  .phone{font-size:28px;color:var(--green-dark)}
+  .pill{background:var(--green-dark);color:#fff;font-size:22px;padding:14px 24px;border-radius:40px}
+  .burger{width:36px;display:flex;flex-direction:column;gap:7px;cursor:pointer}
+  .burger span{height:3px;background:#222;border-radius:2px}
+
+  /* Breadcrumb banner */
+  .banner{background:linear-gradient(90deg,var(--green-banner-1),var(--green-banner-2));height:126px;color:#fff}
+  .banner .container{height:100%;display:flex;align-items:center;font-size:25px}
+  .banner a{text-decoration:underline}
+  .banner span{margin:0 14px}
+
+  /* Main */
+  main .container{display:grid;grid-template-columns:1fr 472px;gap:45px;padding-top:62px;padding-bottom:80px}
+  .open h2{text-align:center;color:var(--green-dark);font-size:33px;font-weight:500}
+  .open .dot{width:1px;height:42px;background:#999;margin:38px auto 0;position:relative}
+  .open .dot::after{content:"";position:absolute;bottom:-9px;left:-5px;width:10px;height:10px;border:1px solid var(--green-dark);border-radius:50%;background:#fff}
+  .notice{text-align:center;color:#e00000;font-size:25px;line-height:40px;margin:52px 0 38px}
+  .card{background:var(--card-bg);border-radius:18px;padding:20px 30px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+  .card p{font-size:21px;max-width:640px;line-height:24px;color:#111}
+  .btns{display:flex;flex-direction:column;gap:14px}
+  .btn{background:var(--green-dark);color:#fff;font-size:19px;padding:12px 22px;border-radius:30px;text-align:center}
+
+  /* Sidebar */
+  .search{width:100%;height:58px;border:1px solid #ddd;border-radius:6px;padding:0 24px;font-size:22px;color:#555}
+  .search-btn{display:flex;align-items:center;justify-content:center;width:135px;height:47px;background:var(--green-dark);border-radius:6px;margin-top:21px;color:#fff;font-size:22px}
+  aside h3{font-size:30px;font-weight:400;color:#555;margin:60px 0 28px}
+  aside ul{list-style:none}
+  aside li{margin-bottom:21px}
+  aside li a{color:var(--green-link);font-size:22px}
+  aside li a:hover{text-decoration:underline}
+
+  /* Floating elements */
+  .side-tab{position:fixed;top:465px;width:44px;background:#fff;box-shadow:0 0 8px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;transform:rotate(180deg);color:var(--green-dark);font-size:22px;letter-spacing:3px;height:210px;border-radius:0 10px 10px 0;transform:none}
+  .tab-left{left:0}
+  .tab-left.sub{top:747px}
+  .tab-right{right:20px;top:462px;border-radius:10px 0 0 10px;height:300px}
+  .chat{position:fixed;right:85px;bottom:18px;width:88px;height:88px;background:#0a7a4a;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .chat::after{content:"";position:absolute;inset:28px;background:#fff;border-radius:50%}
+
+  @media (max-width:1000px){
+    nav{display:none}
+    main .container{grid-template-columns:1fr}
+    .side-tab,.chat{display:none}
+    .card{flex-direction:column;align-items:flex-start;gap:16px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">
+      <b>Your Bank PLC.</b>
+      <small>Logo placeholder</small>
+    </div>
+    <nav>
+      <a href="#">Loan</a>
+      <a href="#">Deposit</a>
+      <a href="#">Services</a>
+    </nav>
+    <div class="right">
+      <span class="phone">&#9742; 16645</span>
+      <a class="pill" href="#">iBanking</a>
+      <a class="pill" href="#">e-Wallet</a>
+      <div class="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="container"><a href="#">HOME</a><span>/</span>Career With Us</div>
+</div>
+
+<main>
+  <div class="container">
+    <section class="open">
+      <h2>Open Position</h2>
+      <div class="dot"></div>
+      <p class="notice">For any query related to Admit Card please contact through this email:<br>example@example.com</p>
+
+      <div class="card">
+        <p>List of selected candidates for appointments as Assistant Officer (General) in the Bank</p>
+        <div class="btns">
+          <a class="btn" href="#">View</a>
+          <a class="btn" href="#">Attachment</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <p>List of selected candidates for appointments as Assistant Officer (Cash) in the Bank</p>
+        <div class="btns">
+          <a class="btn" href="#">View</a>
+          <a class="btn" href="#">Attachment</a>
+        </div>
+      </div>
+    </section>
+
+    <main>
+  <div class="container">
+    <section class="open">
+      <h2>Open Position</h2>
+      <div class="dot"></div>
+      <p class="notice">For any query related to Admit Card please contact through this email:<br>example@example.com</p>
+
+      <div class="card">
+        <p>List of selected candidates for appointments as Assistant Officer (General) in the Bank</p>
+        <div class="btns">
+          <a class="btn" href="#">View</a>
+          <a class="btn" href="#">Attachment</a>
+        </div>
+      </div>
+    </section>
+
+    <aside>
+      <div class="search">Search...</div>
+      <div class="search-btn">&#128269;</div>
+      <h3>Job Categories</h3>
+      <ul>
+        <li><a href="#">ASSISTANT OFFICER(GEN)</a></li>
+        <li><a href="#">SENIOR OFFICER</a></li>
+        <li><a href="#">SENIOR OFFICER(CASH)</a></li>
+        <li><a href="#">PROBATIONARY OFFICER</a></li>
+        <li><a href="#">OFFICER GRADE-II</a></li>
+        <li><a href="#">OFFICER GRADE-II(CASH)</a></li>
+        <li><a href="#">Assistant Officer (Cash)</a></li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+<div class="side-tab tab-left">BRANCHES</div>
+<div class="side-tab tab-left sub">SUB BRANCHS</div>
+<div class="side-tab tab-right">EXCHANGE RATES</div>
+<div class="chat"></div>
+
+</body>
+</html>
